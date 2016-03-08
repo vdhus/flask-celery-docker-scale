@@ -9,7 +9,7 @@ docker-compose up -d # run in detached mode
 
 ```
 
-No load `http://your-dockermachine-ip:5000/add/2/3` in browser. It should create a task and return a task id.
+Now load `http://your-dockermachine-ip:5000/add/2/3` in browser. It should create a task and return a task id.
 
 To check the status of the job hit `http://your-dockermachine-ip:5000/check/taskid`. It should either show `PENDING` or the result `5`.
 
