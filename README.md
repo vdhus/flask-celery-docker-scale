@@ -1,5 +1,5 @@
 ## flask-celery-docker-scale
-Example docker-compose config for scaling celery worker with separate code base. It uses the classical addition task as an example. `flask-app` and `flask-celery` have seperate codebase (In other work we don't need to have access to the celery task module and thus don't need to import the celery task in the flask app) and `flask-app` uses the `name` attribute of a task and `celery.send_task` to submit a job without having the access to celery workers code base.
+Example docker-compose config for scaling celery worker with separate code base. It uses the classical addition task as an example. `flask-app` and `flask-celery` have seperate codebase (In other words we don't need to have access to the celery task module and don't need to import the celery task in the flask app) and `flask-app` uses the `name` attribute of a task and `celery.send_task` to submit a job without having the access to celery workers code base.
 
 To run the example:
 ```bash
