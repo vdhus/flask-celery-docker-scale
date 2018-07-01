@@ -2,12 +2,12 @@ import os
 import time
 from celery import Celery
 
-env=os.environ
-CELERY_BROKER_URL=env.get('CELERY_BROKER_URL','redis://localhost:6379'),
-CELERY_RESULT_BACKEND=env.get('CELERY_RESULT_BACKEND','redis://localhost:6379')
+env = os.environ
+CELERY_BROKER_URL = env.get('CELERY_BROKER_URL','redis://localhost:6379'),
+CELERY_RESULT_BACKEND = env.get('CELERY_RESULT_BACKEND','redis://localhost:6379')
 
 
-# @TODO: replace this method with the actual optimization:
+# @TODO: replace this method with the actual optimization code (import):
 def find_optimal_bids(data):
 	time.sleep(10)
 	return {
@@ -15,7 +15,7 @@ def find_optimal_bids(data):
 	}
 
 
-celery= Celery('tasks',
+celery = Celery('tasks',
                 broker=CELERY_BROKER_URL,
                 backend=CELERY_RESULT_BACKEND)
 

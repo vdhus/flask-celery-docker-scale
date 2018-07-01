@@ -5,7 +5,7 @@ from worker import celery
 from celery.result import AsyncResult
 import celery.states as states
 
-env=os.environ
+env = os.environ
 app = Flask(__name__)
 
 
