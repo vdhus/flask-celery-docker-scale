@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    entrypoint: sleep infinity
+    volumes:
+      - ./flask-app:/code
+  worker:
+    entrypoint: sleep infinity
+    volumes:
+      - ./flask-celery:/code
+  monitor:
+    entrypoint: flower
+    command:  -A tasks --port=5555 --broker=redis://redis:6379/0
