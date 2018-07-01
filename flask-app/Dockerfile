@@ -17,7 +17,7 @@ ENV PORT 5000
 ENV DEBUG true
 
 EXPOSE 5000
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
 RUN mkdir /code
